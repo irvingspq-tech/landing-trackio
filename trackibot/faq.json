@@ -1,0 +1,1035 @@
+{
+ "version": "borrador 3",
+ "generated": "2026-10-05",
+ "messages": {
+  "greeting": "¡Hola! Soy TrackI, el asistente virtual de Trackio. Puedo resolver dudas sobre la plataforma, la medición y cómo empezar. Elige una pregunta o escribe la tuya.",
+  "suggest": "No estoy seguro de haber entendido. ¿Te refieres a alguna de estas?",
+  "fallback": "Esa pregunta la puede responder mejor nuestro equipo técnico de Vive Energía. Escríbenos o llámanos y con gusto te ayudamos lo antes posible.",
+  "closing": "¿Te ayudo con algo más?"
+ },
+ "fallbackButtons": [
+  "demo",
+  "email",
+  "call",
+  "whatsapp"
+ ],
+ "suggested": [
+  "1.1",
+  "2.1",
+  "3.1",
+  "7.1",
+  "10.1",
+  "9.3"
+ ],
+ "items": [
+  {
+   "id": "1.1",
+   "category": "Sobre Trackio y Vive Energía",
+   "q": "¿Qué es Trackio?",
+   "a": "Trackio es una plataforma digital de monitoreo de consumo eléctrico. Instalamos medidores IoT en tus puntos de consumo y concentramos la información en una sola plataforma, con detección de anomalías, alertas y predicciones con inteligencia artificial para que tomes decisiones y ahorres con datos, no con suposiciones.",
+   "derive": false,
+   "variants": [
+    "qué hacen",
+    "a qué se dedican",
+    "de qué trata Trackio",
+    "para qué sirve Trackio"
+   ]
+  },
+  {
+   "id": "1.2",
+   "category": "Sobre Trackio y Vive Energía",
+   "q": "¿Quién está detrás de Trackio?",
+   "a": "Trackio es una plataforma de Vive Energía, empresa mexicana de energía renovable fundada en 2012, con oficinas en Ciudad de México y Mérida, Yucatán.",
+   "derive": false,
+   "variants": [
+    "quién es Vive Energía",
+    "qué empresa está detrás",
+    "quiénes son"
+   ]
+  },
+  {
+   "id": "1.3",
+   "category": "Sobre Trackio y Vive Energía",
+   "q": "¿Para qué tipo de empresas es Trackio?",
+   "a": "Para empresas que quieren entender y controlar su consumo eléctrico: plantas industriales, operaciones con varios sitios o sucursales y espacios comerciales en renta. Tenemos casos en la industria alimenticia, automotriz y retail.",
+   "derive": false,
+   "variants": [
+    "para quién es",
+    "a quién va dirigido",
+    "qué clientes tienen"
+   ]
+  },
+  {
+   "id": "1.4",
+   "category": "Sobre Trackio y Vive Energía",
+   "q": "¿Qué problemas resuelve Trackio?",
+   "a": "Te ayuda con cinco problemas comunes: una factura que sube sin saber qué la provocó, consumo fuera de horario que nadie ve, datos dispersos en Excel o sistemas separados, costos que no puedes repartir por área o sucursal, y equipos que gastan de más.",
+   "derive": false,
+   "variants": [
+    "beneficios",
+    "ventajas",
+    "para qué me sirve"
+   ]
+  },
+  {
+   "id": "1.5",
+   "category": "Sobre Trackio y Vive Energía",
+   "q": "¿En qué se diferencia de un recibo de CFE o de un medidor normal?",
+   "a": "El recibo te dice cuánto consumiste en total; Trackio te dice qué equipo, área o proceso lo consumió, cuándo y por qué. Además te alerta de anomalías y pronostica tu consumo y costo.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "1.6",
+   "category": "Sobre Trackio y Vive Energía",
+   "q": "¿Trackio es una marca registrada?",
+   "a": "Sí. Trackio® es una marca registrada de Vive Energía.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "2.1",
+   "category": "Qué se puede medir",
+   "q": "¿Qué puedo medir con Trackio?",
+   "a": "Puedes medir a cualquier escala: el consumo general de cada sitio (transformadores y tableros principales), el desglose por áreas, subsistemas y procesos, o equipos críticos de forma individual.",
+   "derive": false,
+   "variants": [
+    "qué miden",
+    "qué se puede monitorear",
+    "alcance de la medición"
+   ]
+  },
+  {
+   "id": "2.2",
+   "category": "Qué se puede medir",
+   "q": "¿Qué equipos se pueden medir?",
+   "a": "Transformadores, tableros generales, líneas de producción, HVAC, iluminación, refrigeración y cámaras frías, motores, compresores y, en general, cualquier carga eléctrica.",
+   "derive": false,
+   "variants": [
+    "qué equipos miden",
+    "pueden medir motores",
+    "compresores",
+    "aire acondicionado",
+    "iluminación"
+   ]
+  },
+  {
+   "id": "2.3",
+   "category": "Qué se puede medir",
+   "q": "¿Qué variables eléctricas mide?",
+   "a": "Corriente, voltaje, potencia, factor de potencia y consumo, todo centralizado en un solo lugar.",
+   "derive": false,
+   "variants": [
+    "qué parámetros miden",
+    "miden voltaje",
+    "miden corriente",
+    "variables"
+   ]
+  },
+  {
+   "id": "2.4",
+   "category": "Qué se puede medir",
+   "q": "¿Puedo medir equipo por equipo?",
+   "a": "Sí. Puedes medir equipos críticos de forma individual y detectar cuáles consumen más, cuándo y por qué.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "2.5",
+   "category": "Qué se puede medir",
+   "q": "¿Cómo decido qué tan a fondo medir?",
+   "a": "Tú eliges el nivel de detalle, y lo definimos contigo en el diagnóstico inicial: identificamos tus equipos críticos y dónde vale la pena medir.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "2.6",
+   "category": "Qué se puede medir",
+   "q": "¿Puedo medir varias plantas o sucursales?",
+   "a": "Sí. Puedes ver todos tus centros de consumo en un solo mapa y comparar sitios entre sí, por ejemplo para detectar desviaciones entre sucursales.",
+   "derive": false,
+   "variants": [
+    "varias plantas",
+    "varios sitios",
+    "multisitio",
+    "varias sucursales"
+   ]
+  },
+  {
+   "id": "2.7",
+   "category": "Qué se puede medir",
+   "q": "¿Puedo medir locales que rento a terceros?",
+   "a": "Sí. Trackio permite la submedición individual por local o sucursal, para conocer y repartir el consumo de cada uno.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "2.8",
+   "category": "Qué se puede medir",
+   "q": "¿Puedo medir la generación de mis paneles solares?",
+   "a": "Es posible según la configuración de tu instalación; nuestro equipo técnico lo revisa contigo en el diagnóstico pero siempre podemos ofrecerte una propuesta.",
+   "derive": false,
+   "variants": [
+    "paneles solares",
+    "fotovoltaico",
+    "generación solar"
+   ]
+  },
+  {
+   "id": "3.1",
+   "category": "Instalación y medidores",
+   "q": "¿Tengo que detener mi operación para instalar los medidores?",
+   "a": "No. Los medidores IoT son no invasivos y se instalan sin detener tu operación.",
+   "derive": false,
+   "variants": [
+    "hay que apagar",
+    "cortar la luz",
+    "paro de planta",
+    "detener producción",
+    "interrumpir la operación"
+   ]
+  },
+  {
+   "id": "3.2",
+   "category": "Instalación y medidores",
+   "q": "¿Qué tipo de medidores usan?",
+   "a": "Medidores IoT no invasivos, certificados ANSI C12.20.",
+   "derive": false,
+   "variants": [
+    "qué medidores usan",
+    "marca de los medidores",
+    "sensores"
+   ]
+  },
+  {
+   "id": "3.3",
+   "category": "Instalación y medidores",
+   "q": "¿Qué significa que los medidores estén certificados ANSI C12.20?",
+   "a": "ANSI C12.20 es un estándar de exactitud para medidores de energía eléctrica. Significa que las mediciones cumplen con una clase de precisión reconocida para medición de energía.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "3.4",
+   "category": "Instalación y medidores",
+   "q": "¿Cómo se conectan los medidores a la plataforma?",
+   "a": "Por conexión Ethernet o por red celular.",
+   "derive": false,
+   "variants": [
+    "cómo se conectan",
+    "cómo transmiten los datos",
+    "comunicación de los medidores",
+    "wifi"
+   ]
+  },
+  {
+   "id": "3.5",
+   "category": "Instalación y medidores",
+   "q": "¿Necesito internet en mi planta?",
+   "a": "No necesariamente. Si no hay red disponible en el punto de medición, los medidores pueden conectarse por red celular.",
+   "derive": false,
+   "variants": [
+    "necesito internet",
+    "sin internet",
+    "no tengo red"
+   ]
+  },
+  {
+   "id": "3.6",
+   "category": "Instalación y medidores",
+   "q": "¿Cuánto tarda la instalación?",
+   "a": "Depende del número de puntos de medición; te daremos un tiempo estimado después del diagnóstico de nuestro equipo técnico.",
+   "derive": false,
+   "variants": [
+    "tiempo de instalación",
+    "cuánto tardan en instalar",
+    "cuántos días dura la instalación"
+   ]
+  },
+  {
+   "id": "3.7",
+   "category": "Instalación y medidores",
+   "q": "¿Quién realiza la instalación?",
+   "a": "La instalación la realiza nuestro equipo técnico de Vive Energía.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "3.8",
+   "category": "Instalación y medidores",
+   "q": "¿Los medidores se compran o se rentan?",
+   "a": "Nuestro equipo Comercial te ofrecerá la propuesta que se ajuste a tus necesidades.",
+   "derive": false,
+   "variants": [
+    "comprar los medidores",
+    "rentar los equipos",
+    "los equipos son míos"
+   ]
+  },
+  {
+   "id": "3.9",
+   "category": "Instalación y medidores",
+   "q": "¿Hacen trabajos en todo México?",
+   "a": "Sí, atendemos proyectos en todo México; nuestro equipo confirma contigo la logística de tu sitio.",
+   "derive": false,
+   "variants": [
+    "cobertura",
+    "trabajan en mi ciudad",
+    "dan servicio en mi estado",
+    "Monterrey",
+    "Guadalajara"
+   ]
+  },
+  {
+   "id": "3.10",
+   "category": "Instalación y medidores",
+   "q": "¿Qué pasa si un medidor se desconecta?",
+   "a": "En la plataforma puedes ver el estado y la última conexión de cada dispositivo, así que se detecta de inmediato.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "4.1",
+   "category": "Plataforma y funciones",
+   "q": "¿Qué incluye la plataforma?",
+   "a": "Monitoreo continuo e histórico, alertas personalizadas, dashboards y KPIs a la medida, reportes mensuales, pronósticos con inteligencia artificial y vistas como el mapa de tus sitios, el mapa de calor, los diagramas unifilares y el listado de puntos de medición.",
+   "derive": false,
+   "variants": [
+    "funciones",
+    "funcionalidades",
+    "qué hace la plataforma"
+   ]
+  },
+  {
+   "id": "4.2",
+   "category": "Plataforma y funciones",
+   "q": "¿El monitoreo es en tiempo real?",
+   "a": "El monitoreo es continuo, 24/7, con visibilidad total de tu consumo eléctrico y mediciones cada 5 minutos.",
+   "derive": false,
+   "variants": [
+    "tiempo real",
+    "cada cuánto miden",
+    "frecuencia de medición",
+    "intervalo de medición"
+   ]
+  },
+  {
+   "id": "4.3",
+   "category": "Plataforma y funciones",
+   "q": "¿Qué es el Mapa de Perfil General?",
+   "a": "Es una vista con todos tus centros de consumo en un solo mapa, con la potencia y el consumo del día. Cuando se dispara una alerta, el centro cambia de color de inmediato.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "4.4",
+   "category": "Plataforma y funciones",
+   "q": "¿Qué es el Mapa de Calor?",
+   "a": "Es una matriz de color que muestra tu consumo por hora y día de la semana. Sirve para identificar de un vistazo picos, horarios de desperdicio y comportamientos recurrentes.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "4.5",
+   "category": "Plataforma y funciones",
+   "q": "¿Qué son los Diagramas Unifilares en Trackio?",
+   "a": "Tus diagramas unifilares quedan digitalizados en la plataforma, con cada medidor en su punto exacto. Al seleccionar uno ves su potencia actual y el consumo del día.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "4.6",
+   "category": "Plataforma y funciones",
+   "q": "¿Qué es el Listado de Puntos de Medición?",
+   "a": "Es una vista con todos tus dispositivos: potencia, consumo del día, estado y última conexión, siempre actualizados.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "4.7",
+   "category": "Plataforma y funciones",
+   "q": "¿Puedo ver el historial de consumo?",
+   "a": "Sí. La plataforma guarda el historial de consumos, desde la vista general de tus sitios hasta el detalle de cada medidor.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "4.8",
+   "category": "Plataforma y funciones",
+   "q": "¿Puedo personalizar los dashboards y reportes?",
+   "a": "Sí. Diseñamos dashboards y reportes con KPIs hechos a la medida de tu operación, con hallazgos y oportunidades de ahorro.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "4.9",
+   "category": "Plataforma y funciones",
+   "q": "¿Recibo reportes periódicos?",
+   "a": "Sí, reportes mensuales a tu medida.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "4.10",
+   "category": "Plataforma y funciones",
+   "q": "¿Puedo exportar mis datos a Excel?",
+   "a": "Sí, Trackio permite exportar tus datos a Excel, CSV y PDF.",
+   "derive": false,
+   "variants": [
+    "exportar",
+    "descargar mis datos",
+    "excel",
+    "csv",
+    "pdf"
+   ]
+  },
+  {
+   "id": "4.11",
+   "category": "Plataforma y funciones",
+   "q": "¿Trackio se integra con mi ERP, SCADA o BMS?",
+   "a": "Sí, pero nuestro equipo técnico te apoyará a validarlo, ya que cada equipo de medición tiene sus particularidades.",
+   "derive": false,
+   "variants": [
+    "integración",
+    "api",
+    "erp",
+    "scada",
+    "bms",
+    "sap"
+   ]
+  },
+  {
+   "id": "4.12",
+   "category": "Plataforma y funciones",
+   "q": "¿Cuántos usuarios pueden entrar a la plataforma?",
+   "a": "Actualmente, no tenemos un límite de usuarios.",
+   "derive": false,
+   "variants": [
+    "cuántos usuarios",
+    "usuarios ilimitados",
+    "cuántas cuentas"
+   ]
+  },
+  {
+   "id": "4.13",
+   "category": "Plataforma y funciones",
+   "q": "¿Puedo usar Trackio desde el celular?",
+   "a": "Sí, desde la versión web.",
+   "derive": false,
+   "variants": [
+    "app",
+    "aplicación móvil",
+    "desde el teléfono"
+   ]
+  },
+  {
+   "id": "4.14",
+   "category": "Plataforma y funciones",
+   "q": "¿Cómo entro a la plataforma si ya soy cliente?",
+   "a": "Desde el botón \"Inicio de sesión\" de la página, o directamente en trackio.viveenergia.com/login.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "5.1",
+   "category": "Inteligencia artificial, alertas y pronósticos",
+   "q": "¿Cómo usa Trackio la inteligencia artificial?",
+   "a": "Con modelos matemáticos e inteligencia artificial que aprende de tus consumos: pronostica tu consumo del mes, anticipa desviaciones con alertas predictivas y proyecta tu costo con las tarifas de CFE.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "5.2",
+   "category": "Inteligencia artificial, alertas y pronósticos",
+   "q": "¿Qué son las alertas históricas?",
+   "a": "Son alertas que te avisan de inmediato cuando ocurre un evento, por ejemplo un sobreconsumo.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "5.3",
+   "category": "Inteligencia artificial, alertas y pronósticos",
+   "q": "¿Qué son las alertas predictivas?",
+   "a": "Son alertas que, con IA y modelos matemáticos, te avisan de una desviación con hasta una hora de anticipación, antes de que el evento impacte tu operación.",
+   "derive": false,
+   "variants": [
+    "alertas predictivas",
+    "anticipación de alertas"
+   ]
+  },
+  {
+   "id": "5.4",
+   "category": "Inteligencia artificial, alertas y pronósticos",
+   "q": "¿Puedo configurar mis propias alertas?",
+   "a": "Sí. Las alertas son personalizadas y se configuran según tu operación, por ejemplo para detectar consumo fuera de horario.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "5.5",
+   "category": "Inteligencia artificial, alertas y pronósticos",
+   "q": "¿Por qué medio llegan las alertas?",
+   "a": "Por la vía de correo electrónico.",
+   "derive": false,
+   "variants": [
+    "notificaciones",
+    "cómo me avisan",
+    "cómo recibo las alertas"
+   ]
+  },
+  {
+   "id": "5.6",
+   "category": "Inteligencia artificial, alertas y pronósticos",
+   "q": "¿Qué es el módulo Consumos Futuros?",
+   "a": "Con IA y modelos matemáticos, pronostica hasta 30 días en adelante las variables clave de tus puntos de medición.",
+   "derive": false,
+   "variants": [
+    "pronóstico de consumo",
+    "predicción de consumo",
+    "30 días"
+   ]
+  },
+  {
+   "id": "5.7",
+   "category": "Inteligencia artificial, alertas y pronósticos",
+   "q": "¿Qué es el módulo Mis Indicadores?",
+   "a": "Cruza tu pronóstico de consumo con las tarifas vigentes de CFE y te da tu costo proyectado diario, semanal y por componente, todo en una sola pantalla.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "5.8",
+   "category": "Inteligencia artificial, alertas y pronósticos",
+   "q": "¿Qué tan precisos son los pronósticos?",
+   "a": "La precisión mejora conforme el modelo aprende de tus consumos; nuestro equipo te comparte los resultados en tu operación.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "5.9",
+   "category": "Inteligencia artificial, alertas y pronósticos",
+   "q": "¿Cuánto tiempo necesita la IA para empezar a pronosticar?",
+   "a": "Depende de tu instalación, pero típicamente tendrás pronósticos en un muy corto periodo.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "6.1",
+   "category": "DataBot",
+   "q": "¿Qué es DataBot?",
+   "a": "DataBot es el chatbot con inteligencia artificial de Trackio: le preguntas sobre consumos, comparativos y estado de equipos y te responde con tus datos.",
+   "derive": false,
+   "variants": [
+    "chatbot de Trackio",
+    "para qué sirve DataBot"
+   ]
+  },
+  {
+   "id": "6.2",
+   "category": "DataBot",
+   "q": "¿Cómo se usa DataBot?",
+   "a": "Escribes en lenguaje natural, como si le hablaras a un analista, y te responde en segundos con tus datos.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "6.3",
+   "category": "DataBot",
+   "q": "¿Qué le puedo preguntar a DataBot?",
+   "a": "Preguntas sobre tus consumos, comparativos entre sitios o equipos y el estado de tus equipos. Está entrenado con tus datos para darte contexto y hallazgos.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "6.4",
+   "category": "DataBot",
+   "q": "¿DataBot ya está disponible?",
+   "a": "DataBot está en versión Beta, y su desarrollo va viento en popa y cada actualización te ofrecerá más y mejores capacidades.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "6.5",
+   "category": "DataBot",
+   "q": "¿Este asistente es DataBot?",
+   "a": "No, soy TrackI, el hermanito de DataBot. Yo respondo dudas generales sobre Trackio; DataBot vive dentro de la plataforma y responde con los datos de consumo de cada cliente.",
+   "derive": false,
+   "variants": [
+    "eres DataBot",
+    "eres un bot",
+    "con quién estoy hablando"
+   ]
+  },
+  {
+   "id": "7.1",
+   "category": "Ahorro, tarifas y facturación",
+   "q": "¿Cómo me ayuda Trackio a ahorrar?",
+   "a": "Te muestra qué equipo o proceso mueve tu factura, detecta consumos fuera de horario y equipos que gastan de más, y te alerta antes de que una desviación impacte tu operación. Así decides con datos dónde actuar.",
+   "derive": false,
+   "variants": [
+    "ahorrar",
+    "reducir consumo",
+    "bajar mi recibo",
+    "reducir costos de energía"
+   ]
+  },
+  {
+   "id": "7.2",
+   "category": "Ahorro, tarifas y facturación",
+   "q": "¿Cuánto puedo ahorrar?",
+   "a": "Depende de cada operación. Solicita una demo y, con los datos de tu sitio, te damos una estimación concreta de tu potencial de ahorro. Como referencia, en un caso de la industria alimenticia encontramos 24 equipos que no bajaban su consumo con la planta parada y representaban más del 20% de todo lo medido.",
+   "derive": false,
+   "variants": [
+    "cuánto ahorro",
+    "porcentaje de ahorro",
+    "calculadora de ahorro",
+    "cálculo",
+    "calcular mi ahorro",
+    "simulador de ahorro"
+   ],
+   "link": {
+    "button": "demo"
+   }
+  },
+  {
+   "id": "7.3",
+   "category": "Ahorro, tarifas y facturación",
+   "q": "¿Puedo saber cuánto voy a pagar antes de que llegue el recibo?",
+   "a": "Sí. El módulo Mis Indicadores cruza tu pronóstico de consumo con las tarifas vigentes de CFE y te muestra tu costo proyectado diario, semanal y por componente.",
+   "derive": false,
+   "variants": [
+    "proyección de costo",
+    "cuánto voy a pagar",
+    "próximo recibo de luz"
+   ]
+  },
+  {
+   "id": "7.4",
+   "category": "Ahorro, tarifas y facturación",
+   "q": "¿Trackio usa las tarifas de CFE?",
+   "a": "Sí. Los costos se calculan con las tarifas vigentes de CFE.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "7.5",
+   "category": "Ahorro, tarifas y facturación",
+   "q": "¿Puedo verificar que mi factura esté bien cobrada?",
+   "a": "Sí. Trackio permite validar mensualmente tu factura contra mediciones independientes. Lo hicimos, por ejemplo, con una planta automotriz con suministro calificado.",
+   "derive": false,
+   "variants": [
+    "verificar mi recibo",
+    "cobro incorrecto",
+    "auditar mi factura",
+    "error en el recibo"
+   ]
+  },
+  {
+   "id": "7.6",
+   "category": "Ahorro, tarifas y facturación",
+   "q": "¿Trackio sirve si tengo suministro calificado?",
+   "a": "Sí. Uno de nuestros casos de éxito es el monitoreo y auditoría mensual de suministro calificado en la industria automotriz, con seguimiento económico del suministro.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "7.7",
+   "category": "Ahorro, tarifas y facturación",
+   "q": "¿Me ayuda con el factor de potencia?",
+   "a": "Trackio mide el factor de potencia de tus puntos de medición, así puedes darle seguimiento y detectar cuándo baja.",
+   "derive": false,
+   "variants": [
+    "bajo factor de potencia",
+    "multas de CFE",
+    "penalización por factor de potencia"
+   ]
+  },
+  {
+   "id": "7.8",
+   "category": "Ahorro, tarifas y facturación",
+   "q": "¿Puedo repartir el costo de energía por área o sucursal?",
+   "a": "Sí. Trackio desglosa el consumo por sitio, área y equipo, con KPIs y reportes mensuales.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "8.1",
+   "category": "Casos de éxito y sectores",
+   "q": "¿Tienen casos de éxito?",
+   "a": "Sí, en tres enfoques: medición granular en una planta de la industria alimenticia, auditoría de suministro eléctrico en la industria automotriz y comparación de consumo por sucursal en retail.",
+   "derive": false,
+   "variants": [
+    "casos de éxito",
+    "clientes",
+    "experiencias",
+    "referencias"
+   ]
+  },
+  {
+   "id": "8.2",
+   "category": "Casos de éxito y sectores",
+   "q": "¿Qué lograron en la industria alimenticia?",
+   "a": "Submedimos más de 110 equipos críticos en una planta de manufactura, con línea base de consumo y dashboards personalizados. El diagnóstico encontró 24 equipos que no bajaban su consumo con la planta parada (más del 20% de lo medido) y dos equipos idénticos con 62% de diferencia de consumo entre sí.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "8.3",
+   "category": "Casos de éxito y sectores",
+   "q": "¿Qué hicieron en la industria automotriz?",
+   "a": "Monitoreo global de la planta en paralelo con medidores IoT, validación mensual de la factura contra mediciones independientes y seguimiento económico del suministro calificado.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "8.4",
+   "category": "Casos de éxito y sectores",
+   "q": "¿Cómo funciona Trackio en retail o con sucursales?",
+   "a": "Con submedición individual por local o sucursal, comparación de consumo entre sucursales para detectar desviaciones, alertas de consumo fuera de horario y dashboards con KPIs personalizados.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "8.5",
+   "category": "Casos de éxito y sectores",
+   "q": "¿Trackio me ayuda con ISO 50001?",
+   "a": "Trackio apoya la eficiencia energética que busca ISO 50001: línea base de consumo por equipo crítico, seguimiento de desviaciones e indicadores. Lo aplicamos en una planta de la industria alimenticia.",
+   "derive": false,
+   "variants": [
+    "ISO 50001",
+    "norma de eficiencia energética",
+    "certificación energética"
+   ]
+  },
+  {
+   "id": "8.6",
+   "category": "Casos de éxito y sectores",
+   "q": "¿Sirve para mi industria?",
+   "a": "Trackio mide cualquier carga eléctrica, así que se adapta a distintos sectores. Cuéntanos tu caso y lo revisamos contigo en el diagnóstico.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "9.1",
+   "category": "Proceso y cómo empezar",
+   "q": "¿Cómo funciona el proceso?",
+   "a": "En 4 pasos: 1) Diagnóstico y dimensionamiento, 2) Instalación de medidores sin detener tu operación, 3) Datos centralizados en una sola plataforma con alertas, y 4) Dashboards y reportes con hallazgos y oportunidades de ahorro.",
+   "derive": false,
+   "variants": [
+    "proceso",
+    "pasos",
+    "cómo empiezo",
+    "cómo es la implementación"
+   ]
+  },
+  {
+   "id": "9.2",
+   "category": "Proceso y cómo empezar",
+   "q": "¿En qué consiste el diagnóstico?",
+   "a": "Entendemos tus necesidades, identificamos tus equipos críticos y definimos dónde vale la pena medir.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "9.3",
+   "category": "Proceso y cómo empezar",
+   "q": "¿Cómo solicito una demo?",
+   "a": "Llena el formulario \"Solicita tu demo gratuita\" al final de la página con tu nombre, empresa y correo corporativo, y nuestro equipo te contactará.",
+   "derive": false,
+   "variants": [
+    "demo",
+    "demostración",
+    "agendar una demo",
+    "solicitar demo",
+    "cita"
+   ]
+  },
+  {
+   "id": "9.4",
+   "category": "Proceso y cómo empezar",
+   "q": "¿La demo tiene costo?",
+   "a": "No, la demo es gratuita.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "9.5",
+   "category": "Proceso y cómo empezar",
+   "q": "¿Qué pasa después de solicitar la demo?",
+   "a": "Nuestro equipo te contacta en menos de 24 horas hábiles para conocer tu operación y mostrarte cómo se vería Trackio en tu caso.",
+   "derive": false,
+   "variants": [
+    "tiempo de respuesta",
+    "cuándo me contactan",
+    "cuánto tardan en responder"
+   ]
+  },
+  {
+   "id": "9.6",
+   "category": "Proceso y cómo empezar",
+   "q": "¿Cuánto tiempo tarda en estar funcionando?",
+   "a": "Depende del alcance del proyecto; después del diagnóstico te damos un calendario desde la instalación hasta la plataforma configurada.",
+   "derive": false,
+   "variants": [
+    "cuánto tarda en funcionar",
+    "tiempo de implementación",
+    "arranque"
+   ]
+  },
+  {
+   "id": "9.7",
+   "category": "Proceso y cómo empezar",
+   "q": "¿Puedo empezar con pocos puntos de medición y crecer después?",
+   "a": "Sí, puedes empezar con tus puntos principales y ampliar la medición cuando lo necesites. Trackio es totalmente modular.",
+   "derive": false,
+   "variants": [
+    "modular",
+    "empezar pequeño",
+    "crecer después"
+   ]
+  },
+  {
+   "id": "9.8",
+   "category": "Proceso y cómo empezar",
+   "q": "¿Tienen una presentación de Trackio?",
+   "a": "Sí. Puedes verla en trackio.com.mx/presentacion o con el ícono de presentación al final de la página.",
+   "derive": false,
+   "variants": [
+    "presentación",
+    "brochure",
+    "ppt"
+   ]
+  },
+  {
+   "id": "10.1",
+   "category": "Precios y contratación",
+   "q": "¿Cuánto cuesta Trackio?",
+   "a": "El costo depende de cuántos puntos quieras medir y del alcance de tu proyecto. Ofrecemos esquemas como mensualidad con permanencia o cobro por punto de medición. Solicita una demo gratuita y te preparamos una propuesta a la medida.",
+   "derive": false,
+   "variants": [
+    "precio",
+    "costo",
+    "cuánto vale",
+    "cotización",
+    "tarifa del servicio"
+   ]
+  },
+  {
+   "id": "10.2",
+   "category": "Precios y contratación",
+   "q": "¿Es un pago mensual o un pago único?",
+   "a": "",
+   "derive": true,
+   "variants": [
+    "forma de pago",
+    "mensualidad",
+    "pago único"
+   ]
+  },
+  {
+   "id": "10.3",
+   "category": "Precios y contratación",
+   "q": "¿Hay un plazo forzoso?",
+   "a": "",
+   "derive": true,
+   "variants": [
+    "contrato",
+    "plazo forzoso",
+    "permanencia",
+    "cancelar el servicio"
+   ]
+  },
+  {
+   "id": "10.4",
+   "category": "Precios y contratación",
+   "q": "¿Facturan?",
+   "a": "Sí, emitimos factura (CFDI).",
+   "derive": false,
+   "variants": [
+    "factura",
+    "cfdi",
+    "facturación"
+   ]
+  },
+  {
+   "id": "10.5",
+   "category": "Precios y contratación",
+   "q": "¿Tienen periodo de prueba?",
+   "a": "Hoy ofrecemos nuestra demo gratuita.",
+   "derive": false,
+   "variants": [
+    "prueba gratis",
+    "periodo de prueba",
+    "trial"
+   ]
+  },
+  {
+   "id": "11.1",
+   "category": "Datos, seguridad y privacidad",
+   "q": "¿Mis datos están seguros?",
+   "a": "",
+   "derive": true,
+   "variants": [
+    "seguridad",
+    "mis datos están seguros",
+    "protección de datos",
+    "ciberseguridad"
+   ]
+  },
+  {
+   "id": "11.2",
+   "category": "Datos, seguridad y privacidad",
+   "q": "¿Quién es dueño de mis datos de consumo?",
+   "a": "",
+   "derive": true,
+   "variants": [
+    "dueño de los datos",
+    "propiedad de la información",
+    "confidencialidad"
+   ]
+  },
+  {
+   "id": "11.3",
+   "category": "Datos, seguridad y privacidad",
+   "q": "¿Cómo usan mis datos personales?",
+   "a": "El tratamiento de tus datos personales se rige por nuestro Aviso de Privacidad, disponible al final de la página.",
+   "derive": false,
+   "variants": []
+  },
+  {
+   "id": "11.4",
+   "category": "Datos, seguridad y privacidad",
+   "q": "¿Este asistente guarda mis conversaciones?",
+   "a": "No. Este asistente responde directamente en tu navegador y no guarda lo que escribes.",
+   "derive": false,
+   "variants": [
+    "guardas mis conversaciones",
+    "privacidad del chat"
+   ]
+  },
+  {
+   "id": "12.1",
+   "category": "Soporte para clientes",
+   "q": "Ya soy cliente, ¿dónde entro a la plataforma?",
+   "a": "En el botón \"Inicio de sesión\" de la página o en trackio.viveenergia.com/login.",
+   "derive": false,
+   "variants": [
+    "iniciar sesión",
+    "login",
+    "entrar a la plataforma",
+    "acceso a la plataforma"
+   ]
+  },
+  {
+   "id": "12.2",
+   "category": "Soporte para clientes",
+   "q": "Olvidé mi contraseña, ¿qué hago?",
+   "a": "Nuestra plataforma tiene recuperación de contraseña, sin embargo siempre puedes contactar a nuestro equipo de soporte.",
+   "derive": false,
+   "variants": [
+    "olvidé mi contraseña",
+    "recuperar contraseña",
+    "password"
+   ]
+  },
+  {
+   "id": "12.3",
+   "category": "Soporte para clientes",
+   "q": "Tengo un problema con mi plataforma o un medidor, ¿a quién contacto?",
+   "a": "Escríbenos y nuestro equipo técnico te ayuda.",
+   "derive": false,
+   "variants": [
+    "soporte",
+    "falla",
+    "problema técnico",
+    "no funciona mi medidor"
+   ]
+  },
+  {
+   "id": "12.4",
+   "category": "Soporte para clientes",
+   "q": "¿Ofrecen capacitación para usar la plataforma?",
+   "a": "Sí, contamos con módulos de capacitación.",
+   "derive": false,
+   "variants": [
+    "capacitación",
+    "entrenamiento",
+    "curso"
+   ]
+  },
+  {
+   "id": "12.5",
+   "category": "Soporte para clientes",
+   "q": "¿Cuál es el horario de atención?",
+   "a": "Nuestro horario de atención a ventas es de 9 a 19 horas de lunes a viernes. Pero cualquier mensaje fuera de este horario será atendido por nuestro equipo en horario de oficina.",
+   "derive": false,
+   "variants": [
+    "horario",
+    "a qué hora atienden",
+    "horas de atención"
+   ]
+  },
+  {
+   "id": "13.1",
+   "category": "Contacto",
+   "q": "¿Cómo los contacto?",
+   "a": "Por correo a c.arechederra@trackio.com.mx, al móvil +52 1 55 6630 3516 o al teléfono +52 (55) 2167 3173. También puedes llenar el formulario de demo al final de la página.",
+   "derive": false,
+   "variants": [
+    "contacto",
+    "teléfono",
+    "correo",
+    "email"
+   ]
+  },
+  {
+   "id": "13.2",
+   "category": "Contacto",
+   "q": "¿Dónde están sus oficinas?",
+   "a": "En Ciudad de México (P.º de los Tamarindos, Granjas Palo Alto, Cuajimalpa de Morelos, 05110, CDMX) y en Mérida, Yucatán (C. 20 235, Col. Altabrisa, 97130).",
+   "derive": false,
+   "variants": [
+    "dirección",
+    "ubicación",
+    "dónde están",
+    "oficinas"
+   ]
+  },
+  {
+   "id": "13.3",
+   "category": "Contacto",
+   "q": "¿Tienen WhatsApp?",
+   "a": "Sí, el móvil +52 1 55 6630 3516 atiende por WhatsApp.",
+   "derive": false,
+   "variants": [
+    "whatsapp",
+    "mensaje por whatsapp"
+   ]
+  },
+  {
+   "id": "13.4",
+   "category": "Contacto",
+   "q": "¿Tienen redes sociales?",
+   "a": "Sí, puedes seguir a Vive Energía en LinkedIn. También puedes visitar www.viveenergia.com.",
+   "derive": false,
+   "variants": [
+    "redes sociales",
+    "linkedin",
+    "facebook"
+   ]
+  },
+  {
+   "id": "13.5",
+   "category": "Contacto",
+   "q": "Quiero hablar con una persona.",
+   "a": "Con gusto. Puedes escribirnos o llamarnos y nuestro equipo te atiende.",
+   "derive": false,
+   "variants": [
+    "hablar con un asesor",
+    "hablar con un humano",
+    "vendedor",
+    "ejecutivo"
+   ]
+  }
+ ]
+}

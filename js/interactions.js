@@ -73,14 +73,6 @@
     var items = document.querySelectorAll(".reveal");
     if (!items.length) return;
 
-    var groupCounts = new Map();
-    items.forEach(function (el) {
-      var parent = el.parentElement;
-      var index = groupCounts.has(parent) ? groupCounts.get(parent) : 0;
-      el.style.transitionDelay = Math.min(index * 90, 360) + "ms";
-      groupCounts.set(parent, index + 1);
-    });
-
     if (!("IntersectionObserver" in window)) {
       items.forEach(function (el) {
         el.classList.add("is-visible");
@@ -88,10 +80,27 @@
       return;
     }
 
+    // Escalona solo entre los elementos que entran a la vez y por filas: los de una misma fila aparecen juntos.
     var showObserver = new IntersectionObserver(
       function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) entry.target.classList.add("is-visible");
+        var entering = entries.filter(function (entry) {
+          return entry.isIntersecting && !entry.target.classList.contains("is-visible");
+        });
+
+        entering.sort(function (a, b) {
+          return a.boundingClientRect.top - b.boundingClientRect.top || a.boundingClientRect.left - b.boundingClientRect.left;
+        });
+
+        var row = -1;
+        var rowTop = null;
+        entering.forEach(function (entry) {
+          var top = entry.boundingClientRect.top;
+          if (rowTop === null || Math.abs(top - rowTop) > 8) {
+            row += 1;
+            rowTop = top;
+          }
+          entry.target.style.transitionDelay = Math.min(row * 90, 360) + "ms";
+          entry.target.classList.add("is-visible");
         });
       },
       { threshold: 0.05, rootMargin: "0px 0px -40px 0px" }
@@ -100,11 +109,18 @@
     // Se reinicia solo al salir por completo de la pantalla, para que vuelva a animarse al regresar.
     var resetObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (!entry.isIntersecting) entry.target.classList.remove("is-visible");
+        if (!entry.isIntersecting) {
+          entry.target.style.transitionDelay = "";
+          entry.target.classList.remove("is-visible");
+        }
       });
     });
 
     items.forEach(function (el) {
+      // Quita el retraso al terminar de aparecer, para que no frene las transiciones de hover.
+      el.addEventListener("transitionend", function (event) {
+        if (event.target === el && event.propertyName === "opacity") el.style.transitionDelay = "";
+      });
       showObserver.observe(el);
       resetObserver.observe(el);
     });
@@ -132,6 +148,10 @@
     var video = document.querySelector(".video-embed-player");
     if (!video) return;
 
+    video.addEventListener("contextmenu", function (event) {
+      event.preventDefault();
+    });
+
     if (!("IntersectionObserver" in window)) return;
 
     var observer = new IntersectionObserver(
@@ -150,11 +170,134 @@
     observer.observe(video);
   }
 
+  // Carrusel continuo: clona las tarjetas antes y después para avanzar siempre en la misma dirección.
+  function initSeamlessCarousel(root) {
+    var viewport = root.querySelector(".carousel-viewport");
+    var track = root.querySelector(".carousel-track");
+    var slides = Array.prototype.slice.call(root.querySelectorAll(".carousel-slide"));
+    var prevBtn = root.querySelector(".carousel-btn--prev");
+    var nextBtn = root.querySelector(".carousel-btn--next");
+    var count = slides.length;
+    if (!viewport || !track || !count) return;
+
+    function makeClone(slide) {
+      var clone = slide.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      clone.setAttribute("inert", "");
+      return clone;
+    }
+
+    var firstReal = slides[0];
+    slides.forEach(function (slide) {
+      track.insertBefore(makeClone(slide), firstReal);
+      track.appendChild(makeClone(slide));
+    });
+
+    var dots = document.createElement("div");
+    dots.className = "carousel-dots";
+    var dotButtons = slides.map(function (slide, index) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "carousel-dot";
+      dot.setAttribute("aria-label", "Ir a la tarjeta " + (index + 1));
+      dot.addEventListener("click", function () {
+        goTo(count + index);
+      });
+      dots.appendChild(dot);
+      return dot;
+    });
+    root.appendChild(dots);
+
+    var position = count;
+    var animating = false;
+    var fallbackTimer = null;
+
+    function perPage() {
+      return window.innerWidth > 900 ? 2 : 1;
+    }
+
+    function render(animate) {
+      track.style.transition = animate ? "" : "none";
+      track.style.transform = "translateX(-" + position * (viewport.clientWidth / perPage()) + "px)";
+      if (!animate) {
+        void track.offsetWidth;
+        track.style.transition = "";
+      }
+
+      var active = (((position - count) % count) + count) % count;
+      dotButtons.forEach(function (dot, index) {
+        dot.classList.toggle("is-active", index === active);
+        if (index === active) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
+      });
+
+      var canScroll = count > perPage();
+      if (prevBtn) prevBtn.hidden = !canScroll;
+      if (nextBtn) nextBtn.hidden = !canScroll;
+      dots.hidden = !canScroll;
+    }
+
+    // Al terminar sobre un clon, salta sin animación a la tarjeta real equivalente.
+    function finish() {
+      window.clearTimeout(fallbackTimer);
+      animating = false;
+      var before = position;
+      if (position >= 2 * count) position -= count;
+      else if (position < count) position += count;
+      if (position !== before) render(false);
+    }
+
+    function goTo(target) {
+      if (animating || target === position) return;
+      animating = true;
+      position = target;
+      render(true);
+      fallbackTimer = window.setTimeout(finish, 1000);
+    }
+
+    track.addEventListener("transitionend", function (event) {
+      if (event.target === track && event.propertyName === "transform") finish();
+    });
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        goTo(position - 1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        goTo(position + 1);
+      });
+    }
+
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(function () {
+        render(false);
+      }).observe(viewport);
+    } else {
+      var resizeTimer = null;
+      window.addEventListener("resize", function () {
+        window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(function () {
+          render(false);
+        }, 150);
+      });
+    }
+
+    render(false);
+  }
+
   function initCarousels() {
     var carousels = document.querySelectorAll("[data-carousel]");
     if (!carousels.length) return;
 
     carousels.forEach(function (root) {
+      if (root.getAttribute("data-carousel") === "seamless") {
+        initSeamlessCarousel(root);
+        return;
+      }
+
       var viewport = root.querySelector(".carousel-viewport");
       var track = root.querySelector(".carousel-track");
       var slides = root.querySelectorAll(".carousel-slide");

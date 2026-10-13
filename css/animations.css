@@ -123,6 +123,19 @@
   transform: translateY(-4px);
 }
 
+/* El hover usa `translate` (no `transform`) para no chocar con la animación de aparición. */
+.pain-card {
+  transition: opacity 0.7s var(--ease-reveal), transform 0.7s var(--ease-reveal), translate 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+@media (hover: hover) {
+  .pain-card:hover {
+    translate: 0 -6px;
+    border-color: oklch(68% 0.17 152 / 0.45);
+    box-shadow: var(--shadow-elegant);
+  }
+}
+
 /* — Inputs — */
 .field input,
 .field textarea {

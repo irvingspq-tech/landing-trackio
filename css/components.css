@@ -27,6 +27,10 @@
   font-size: clamp(1.75rem, 3vw, 2.25rem);
 }
 
+.section-title .accent {
+  color: var(--accent);
+}
+
 .section-lead {
   margin-top: 16px;
   font-size: 1.125rem;
@@ -47,19 +51,15 @@
 
 @media (min-width: 640px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.15;
   }
 }
 
-@media (min-width: 1024px) {
+/* En dos columnas, el título escala con el ancho para mantenerse en 3 líneas. */
+@media (min-width: 901px) {
   .hero-title {
-    font-size: 3.25rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .hero-title {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, calc(3vw - 5px), 2.5rem);
   }
 }
 
@@ -69,45 +69,67 @@
   line-height: 1.625;
 }
 
+.hero-cta {
+  margin-top: 32px;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.hero-stat-card {
+  padding: 32px 24px;
+  text-align: center;
+  border-radius: var(--radius-xl);
+  border: 1px solid oklch(98% 0.005 250 / 0.12);
+  background: oklch(98% 0.005 250 / 0.04);
+}
+
 .hero-stats dt {
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 1.375rem;
+  line-height: 1.3;
   color: var(--accent);
 }
 
 .hero-stats dd {
-  margin-top: 4px;
-  font-size: 0.875rem;
-  line-height: 1.4286;
-  color: oklch(98% 0.005 250 / 0.7);
-}
-
-.hero-stat-card {
-  border-radius: var(--radius-md);
-  border: 1px solid oklch(68% 0.17 152 / 0.25);
-  background: oklch(98% 0.005 250 / 0.05);
-  padding: 12px;
-  backdrop-filter: blur(4px);
-}
-
-.hero-stat-card dd {
+  margin-top: 10px;
+  font-size: 1.0625rem;
+  line-height: 1.3;
   color: oklch(98% 0.005 250 / 0.85);
 }
 
 .hero-callout {
-  margin-top: 20px;
-  padding: 14px;
+  margin-top: 32px;
   text-align: center;
-  border-radius: var(--radius-md);
-  border: 1px solid oklch(68% 0.17 152 / 0.25);
-  background: oklch(98% 0.005 250 / 0.05);
-  backdrop-filter: blur(4px);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: oklch(98% 0.005 250 / 0.8);
 }
 
-.hero-callout p {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--navy-foreground);
+@media (max-width: 900px) {
+  .hero-stat-card {
+    padding: 24px 16px;
+  }
+
+  .hero-callout {
+    margin-top: 32px;
+    font-size: 1.1rem;
+  }
+}
+
+.hero-alert-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--navy-deep);
 }
 
 /* — Nav — */
@@ -619,24 +641,102 @@
 
 /* — Dolores comunes — */
 .pain-card {
-  flex: 1 1 calc((100% - 40px) / 3);
-  min-width: 260px;
-  max-width: calc((100% - 40px) / 3);
   display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 20px;
-  border-radius: var(--radius-xl);
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   background: var(--card);
   box-shadow: var(--shadow-card);
 }
 
-.pain-card p {
-  font-size: 0.92rem;
-  font-weight: 500;
+/* El bloque superior crece para que la división quede alineada entre tarjetas de la misma fila. */
+.pain-card-top {
+  flex: 1;
+  padding: 28px 28px 24px;
+}
+
+.pain-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pain-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: oklch(94% 0.035 25);
+  color: oklch(57% 0.21 27);
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pain-number {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--muted-foreground);
+}
+
+.pain-card-top h3 {
+  margin-top: 20px;
+  font-size: 1.0625rem;
+  font-weight: 600;
   line-height: 1.5;
   color: var(--foreground);
+}
+
+.pain-card-solution {
+  padding: 24px 28px 26px;
+  border-top: 1px solid oklch(91% 0.03 152);
+  background: oklch(97.5% 0.022 152);
+}
+
+.pain-solution-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: oklch(58% 0.16 152);
+}
+
+.pain-check {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: oklch(100% 0 0);
+}
+
+.pain-check .icon {
+  width: 12px;
+  height: 12px;
+}
+
+.pain-card-solution > p:last-child {
+  margin-top: 14px;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: oklch(38% 0.09 152);
+}
+
+@media (max-width: 500px) {
+  .pain-card-top {
+    padding: 24px 20px;
+  }
+
+  .pain-card-solution {
+    padding: 20px 20px 24px;
+  }
 }
 
 /* — Medición granular (equipos) — */
@@ -685,18 +785,45 @@
 
 .process-step-body {
   flex: 1;
+  min-width: 0;
   padding-top: 8px;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .process-step-body h3 {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
 }
 
 .process-step-body p {
-  margin-top: 8px;
-  font-size: 0.92rem;
-  line-height: 1.6;
+  margin-top: 10px;
+  max-width: 672px;
+  font-size: 1.125rem;
+  line-height: 1.625;
   color: var(--muted-foreground);
+}
+
+@media (max-width: 900px) {
+  .process-step-number {
+    width: 40px;
+    font-size: 1.75rem;
+  }
+
+  .process-step-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .process-step-body h3 {
+    font-size: 1.2rem;
+  }
+
+  .process-step-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 }
 
 .process-step-chips {
@@ -709,9 +836,10 @@
 .process-chip {
   border-radius: 999px;
   background: var(--navy);
-  padding: 6px 14px;
-  font-size: 0.85rem;
+  padding: 4px 12px;
+  font-size: 0.875rem;
   font-weight: 600;
+  line-height: 1.4;
   color: var(--navy-foreground);
   box-shadow: var(--shadow-card);
 }
@@ -1100,3 +1228,108 @@
   background: var(--brand-green);
   flex-shrink: 0;
 }
+
+/* — Indicador del carrusel — */
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: oklch(98% 0.005 250 / 0.35);
+  transition: width 0.35s var(--ease), background 0.35s var(--ease);
+}
+
+.carousel-dot:hover {
+  background: oklch(98% 0.005 250 / 0.6);
+}
+
+.carousel-dot.is-active {
+  width: 32px;
+  background: var(--accent);
+}
+
+/* Sobre fondo claro los puntos inactivos van en gris, como en el diseño. */
+.section--surface .carousel-dot:not(.is-active) {
+  background: var(--border);
+}
+
+.section--surface .carousel-dot:not(.is-active):hover {
+  background: oklch(52% 0.03 252 / 0.5);
+}
+
+/* — Página de presentación — */
+/* La página ocupa toda la altura de la pantalla para que el pie quede abajo sin franja blanca. */
+.page-presentation {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-presentation main {
+  flex: 1;
+  display: flex;
+}
+
+.presentation {
+  flex: 1;
+  padding-top: 140px;
+}
+
+.presentation .section-head {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.presentation-frame {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid oklch(98% 0.005 250 / 0.15);
+  background: oklch(98% 0.005 250 / 0.04);
+  box-shadow: 0 25px 50px -12px oklch(0% 0 0 / 0.45);
+}
+
+.presentation-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .presentation {
+    padding-top: 120px;
+  }
+
+  .presentation-frame {
+    margin-top: 28px;
+    border-radius: var(--radius-md);
+  }
+}
+
+/* — Acceso a la presentación (pie de página) — */
+.footer-presentation {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  color: oklch(98% 0.005 250 / 0.5);
+  transition: color 0.25s var(--ease);
+}
+
+.footer-presentation:hover {
+  color: var(--accent);
+}
+
+.footer-presentation svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
